@@ -1,4 +1,5 @@
 import { tmdbClient } from "@/lib/axios";
+import { T_CastProfile, T_People } from "@/types";
 
 const getPeoples = async (tmdbType: string, tmdbId: number | string) => {
   try {

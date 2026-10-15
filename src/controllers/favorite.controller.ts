@@ -1,6 +1,7 @@
 import { responseError, responseSuccess } from "@/lib/utils";
 import favoriteService from "@/services/favorite.service";
 import videoService from "@/services/video.service";
+import { T_Movie } from "@/types";
 import { Request, Response } from "express";
 
 const favoriteController = {

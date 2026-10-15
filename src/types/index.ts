@@ -1,4 +1,4 @@
-type T_User = {
+export type T_User = {
   id: string;
   name: string;
   email: string;
@@ -6,14 +6,14 @@ type T_User = {
   avatar: string;
 };
 
-type T_Favorite = {
+export type T_Favorite = {
   id: string;
   userId: string;
   videoSlug: string;
   createdAt: T_Created["time"];
 };
 
-type T_SeoOnPage = {
+export type T_SeoOnPage = {
   og_type: string;
   titleHead: string;
   descriptionHead: string;
@@ -21,21 +21,21 @@ type T_SeoOnPage = {
   og_url: string;
 };
 
-type T_BreadcrumbItem = {
+export type T_BreadcrumbItem = {
   name: string;
   slug?: string;
   isCurrent: boolean;
   position: number;
 };
 
-type T_Pagination = {
+export type T_Pagination = {
   totalItems: number;
   totalItemsPerPage: number;
   currentPage: number;
   totalPages: number;
 };
 
-type T_Params = {
+export type T_Params = {
   pagination: T_Pagination;
   type_slug: string;
   slug: string;
@@ -47,34 +47,34 @@ type T_Params = {
   sortType: string;
 };
 
-type T_TMDB = {
+export type T_TMDB = {
   id: number | string | null;
   type: string;
   vote_average: number;
   vote_count: number;
 };
 
-type T_IMDB = {
+export type T_IMDB = {
   id: string | null;
   vote_average: number;
   vote_count: number;
 };
 
-type T_Created = {
+export type T_Created = {
   time: string;
 };
 
-type T_Modified = T_Created;
+export type T_Modified = T_Created;
 
-type T_Country = {
+export type T_Country = {
   id: string;
   name: string;
   slug: string;
 };
 
-type T_Category = T_Country;
+export type T_Category = T_Country;
 
-type T_Movie = {
+export type T_Movie = {
   tmdb: T_TMDB;
   imdb: T_IMDB;
   _id: string;
@@ -103,7 +103,7 @@ type T_Movie = {
   sub_docquyen: boolean;
 };
 
-type T_ServerDataItem = {
+export type T_ServerDataItem = {
   name: string;
   slug: string;
   filename: string;
@@ -111,15 +111,15 @@ type T_ServerDataItem = {
   link_m3u8: string;
 };
 
-type T_Episode = {
+export type T_Episode = {
   server_name: string;
   is_ai: boolean;
   server_data: T_ServerDataItem[];
 };
 
-type T_TypelistItem = "phim-le" | "phim-bo" | "hoat-hinh" | "tv-shows";
+export type T_TypelistItem = "phim-le" | "phim-bo" | "hoat-hinh" | "tv-shows";
 
-type T_Filter = {
+export type T_Filter = {
   type_list?: T_TypelistItem;
   page?: string;
   sort_field?: string;
@@ -131,7 +131,7 @@ type T_Filter = {
   limit?: string;
 };
 
-type T_People = {
+export type T_People = {
   tmdb_people_id: number;
   id: number;
   adult: boolean;
@@ -145,7 +145,7 @@ type T_People = {
   also_known_as: string[] | null;
 };
 
-type T_WatchedMovie = {
+export type T_WatchedMovie = {
   name: string;
   slug: string;
   poster_url: string;
@@ -157,7 +157,7 @@ type T_WatchedMovie = {
   episode_name: string;
 };
 
-type T_Cast = {
+export type T_Cast = {
   adult: boolean;
   gender: number; // 1 = Nữ, 2 = Nam, 0 = Không xác định
   id: number;
@@ -171,7 +171,7 @@ type T_Cast = {
   order: number;
 };
 
-type T_CastProfile = {
+export type T_CastProfile = {
   biography?: string;
   birthday?: string | null; // có thể null nếu không rõ
   gender: number; // theo TMDB docs
@@ -182,7 +182,7 @@ type T_CastProfile = {
   known_for_department: string;
 };
 
-type T_TvCredit = {
+export type T_TvCredit = {
   adult: boolean;
   backdrop_path: string | null;
   genre_ids: number[];
@@ -204,7 +204,7 @@ type T_TvCredit = {
   episode_count: number;
 };
 
-type T_MovieCredit = {
+export type T_MovieCredit = {
   adult: boolean;
   backdrop_path: string | null;
   genre_ids: number[];

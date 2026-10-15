@@ -1,4 +1,5 @@
 import { mockClient } from "@/lib/axios";
+import { T_Favorite } from "@/types";
 
 const getFavorites = async (
   userId: string,

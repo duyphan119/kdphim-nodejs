@@ -1,4 +1,5 @@
-import { apiClient } from '@/lib/axios';
+import { apiClient } from "@/lib/axios";
+import { T_BreadcrumbItem, T_Movie, T_SeoOnPage } from "@/types";
 
 const getVideoDetail = async (slug: string) => {
   const response = await apiClient.get(`/phim/${slug}`);

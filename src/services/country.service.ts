@@ -1,7 +1,8 @@
-import { apiClient } from '@/lib/axios';
+import { apiClient } from "@/lib/axios";
+import { T_Country } from "@/types";
 
 const getCountries = async () => {
-  const response = await apiClient.get('/quoc-gia');
+  const response = await apiClient.get("/quoc-gia");
 
   return response.data.items as T_Country[];
 };

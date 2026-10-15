@@ -1,7 +1,8 @@
-import { apiClient } from '@/lib/axios';
+import { apiClient } from "@/lib/axios";
+import { T_Category } from "@/types";
 
 const getCategories = async () => {
-  const response = await apiClient.get('/the-loai');
+  const response = await apiClient.get("/the-loai");
 
   return response.data.items as T_Category[];
 };

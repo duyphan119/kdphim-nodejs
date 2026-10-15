@@ -1,4 +1,5 @@
 import { apiClient } from "@/lib/axios";
+import { T_Filter } from "@/types";
 
 const typeList = [
   { name: "Phim lẻ", slug: "phim-le" },

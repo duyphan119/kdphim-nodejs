@@ -1,4 +1,5 @@
 import { mockClient } from "@/lib/axios";
+import { T_User } from "@/types";
 import bcrypt from "bcryptjs";
 import jwt, { JwtPayload, SignOptions } from "jsonwebtoken";
 
